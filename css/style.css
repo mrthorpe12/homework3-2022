@@ -72,7 +72,16 @@ footer a:visited{
 
 /* Requirement 1 code here*/
 
+nav a{
+  text-decoration: none;
+}
+
 /* Requirement 2 code here*/
+
+nav a:hover{
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
 
 
 
@@ -83,16 +92,23 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  
+  position: relative;
+  right: 500px;
 }
 
 
 /* Requirement 4 code here*/
 
+nav a:focus{
+  border-top: 2px solid yellow;
+}
+
 
 .container{
   /* Requirement 5 code here*/
-
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  row-gap: 30px;
 }
 
 /* Requirements 6-10 here: */

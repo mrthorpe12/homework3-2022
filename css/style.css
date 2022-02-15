@@ -94,8 +94,8 @@ a.skip {
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  position: relative;
-  right: 500px;
+  position: absolute;
+  left: 500px;
 }
 
 
@@ -116,8 +116,11 @@ nav a:focus {
 /* Requirements 6-10 here: */
 
 .intro {
-  background: #DDDDDD url('../images/header.jpg');
+  background: url('../images/header.jpg');
   background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #DDDDDD;
   min-height: 400px;
 }
 
@@ -152,7 +155,8 @@ img {
 }
 
 .text {
-  justify-content: center;
+  /* display: block; */
+  align-self: center;
   max-height: 25vh;
   overflow: scroll;
 }
@@ -161,7 +165,7 @@ img {
   nav {
     padding-top: 35px;
     /*Requirement 11*/
-    justify-content: right;
+    text-align: right;
   }
 
   nav li {
@@ -172,7 +176,7 @@ img {
 
   /* Requirements 12-15 here: */
 
-  a.skip {
+  a.skip:focus {
     justify-content: left;
     bottom: 20px;
   }
@@ -184,11 +188,11 @@ img {
   }
 
   .about, .method, .clients-image, .contact-image {
-    grid-column: 3 / 6;
+    grid-column: 3 / 5;
   }
 
   .clients, .contact, .about-image, .method-image {
-    grid-column: 2 / 5;
+    grid-column: 2 / 4;
   }
 
 }
